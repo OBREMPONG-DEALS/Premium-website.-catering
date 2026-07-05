@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A.Class Events Packages Accra. Signature, Prestige, and Luxury catering from GH¢280/guest. Instant quote calculator. Book a tasting today.">
+  <title>Packages & Pricing | A.Class Events Accra</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-jet py-3 sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand aclass-logo fw-bold fs-3" href="index.html">PREMIUM EVENT & <span class="gold-accent">CATERING</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="btn btn-gold btn-sm px-3" href="contact.html">Book Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Packages -->
+<section class="py-5 py-lg-6 bg-ivory">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold serif mb-2">Choose Your A.Class Experience</h1>
+      <p class="fs-5 text-muted col-lg-7 mx-auto">All packages include staff, transport, setup & cleanup. No hidden fees.</p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- Signature -->
+      <div class="col-lg-4">
+        <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+          <h3 class="fw-bold">Signature</h3>
+          <p class="text-muted small">Elegant. Reliable. A.Class baseline.</p>
+          <h2 class="gold-accent fw-bold display-6">GH¢280<span class="fs-6 fw-normal">/guest</span></h2>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li>✓ 2 Mains + 3 Sides</li>
+            <li>✓ Soft Drinks + Water</li>
+            <li>✓ Trained Staff + Transport</li>
+            <li>✓ Basic Table Setup</li>
+          </ul>
+          <button class="btn btn-outline-gold w-100 mt-auto" data-tier="280">Select Signature</button>
+        </div>
+      </div>
+
+      <!-- Prestige - Most Popular -->
+      <div class="col-lg-4">
+        <div class="card h-100 p-4 border-gold shadow-lg rounded-4 position-relative">
+          <span class="badge bg-gold text-dark fw-bold position-absolute top-0 start-50 translate-middle mt-n2 px-3 py-2">Most Booked</span>
+          <h3 class="fw-bold mt-2">Prestige</h3>
+          <p class="text-muted small">For clients who want more.</p>
+          <h2 class="gold-accent fw-bold display-6">GH¢420<span class="fs-6 fw-normal">/guest</span></h2>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li>✓ Everything in Signature</li>
+            <li>✓ + 1 Premium Main Option</li>
+            <li>✓ Live Chef Station</li>
+            <li>✓ Event Coordinator On-Site</li>
+            <li>✓ Upgraded Tableware</li>
+          </ul>
+          <button class="btn btn-gold w-100 mt-auto" data-tier="420">Select Prestige</button>
+        </div>
+      </div>
+
+      <!-- Luxury -->
+      <div class="col-lg-4">
+        <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+          <h3 class="fw-bold">Luxury</h3>
+          <p class="text-muted small">For iconic, once-in-a-lifetime events.</p>
+          <h2 class="gold-accent fw-bold display-6">GH¢650<span class="fs-6 fw-normal">/guest</span></h2>
+          <ul class="list-unstyled mt-3 d-grid gap-2">
+            <li>✓ Everything in Prestige</li>
+            <li>✓ Fully Custom Menu Design</li>
+            <li>✓ Open Bar + Cocktail Service</li>
+            <li>✓ Valet Parking Attendants</li>
+            <li>✓ Luxury Linen + Florals</li>
+          </ul>
+          <button class="btn btn-outline-gold w-100 mt-auto" data-tier="650">Select Luxury</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instant Quote Calculator -->
+    <div class="bg-jet text-white p-4 p-lg-5 rounded-4 mt-5">
+      <h3 class="gold-accent text-center mb-4 serif">Instant Quote Calculator</h3>
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-md-6">
+          <label class="form-label">Guests: <span id="guestCount" class="fw-bold">200</span></label>
+          <input type="range" id="guestSlider" class="form-range" min="20" max="500" value="200">
+          <label class="form-label mt-3">Selected Package:</label>
+          <select id="tierSelect" class="form-select">
+            <option value="280">Signature - GH¢280/guest</option>
+            <option value="420" selected>Prestige - GH¢420/guest</option>
+            <option value="650">Luxury - GH¢650/guest</option>
+          </select>
+        </div>
+        <div class="col-md-6 text-center">
+          <p class="mb-1 text-white-50">Estimated Total</p>
+          <h2 class="display-4 fw-bold gold-accent">GH¢<span id="quote">84,000</span></h2>
+          <a href="contact.html" class="btn btn-gold btn-lg w-100 mt-3">Book GH¢200 Tasting Session</a>
+          <p class="small text-white-50 mt-2">Tasting fee is deducted from your final invoice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-5 pb-5">
+      <div class="col-lg-4">
+        <h3 class="h4 serif mb-3">PREMIUM EVENT & <span>CATERING</span></h3>
+        <p class="text-white-50">Ghana’s Number1 Luxury Catering & Events Management.</p>
+        <div class="d-flex gap-3 mt-3 socials">
+  <a href="https://wa.me/233552387691" target="_blank" class="social-icon" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+  </a>
+  <a href="#" target="_blank" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg></a>
+  <a href="#" target="_blank" class="social-icon" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44.05-2.89-.02-4.33-.53-.28-.11-.53-.23-.77-.39-.65-.45-1.17-1.06-1.5-1.79v10.33c0 4.07-3.3 7.38-7.38 7.38s-7.38-3.31-7.38-7.38c0-4.08 3.3-7.38 7.38-7.38.38 0 .76.03 1.12.09v3.96c-.35-.06-.72-.09-1.09-.09-2.28 0-4.13 1.85-4.13 4.13s1.85 4.13 4.13 4.13c2.28 0 4.13-1.85 4.13-4.13v-16.02z"/></svg></a>
+</div>
+      </div>
+      <div class="col-lg-4">
+        <h4 class="h6 fw-bold mb-3 text-uppercase">Contact</h4>
+        <p class="mb-1 text-white-50">📍 Accra, Ghana</p>
+        <p class="mb-1 text-white-50">📞 <a href="tel:0552387691">055 238 7691</a></p>
+        <p class="mb-0 text-white-50">💬 <a href="https://wa.me/233552387691">055 238 7691</a></p>
+      </div>
+      <div class="col-lg-4">
+        <h4 class="h6 fw-bold mb-3 text-uppercase">Explore</h4>
+        <a href="packages.html" class="d-block mb-2">Packages</a>
+        <a href="gallery.html" class="d-block mb-2">Gallery</a>
+        <a href="contact.html" class="d-block">Contact Us</a>
+      </div>
+    </div>
+    <hr class="footer-hr">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3 small text-white-50">
+      <p class="mb-0">© 2026 Premium Event & Catering. All rights reserved.</p>
+      <div class="d-flex gap-3 mt-2 mt-md-0">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const slider = document.getElementById('guestSlider');
+  const count = document.getElementById('guestCount');
+  const quote = document.getElementById('quote');
+  const tierSelect = document.getElementById('tierSelect');
+
+  function updateQuote(){
+    const guests = parseInt(slider.value);
+    const rate = parseInt(tierSelect.value);
+    count.textContent = guests;
+    quote.textContent = (guests * rate).toLocaleString('en-GH');
+  }
+
+  slider.oninput = updateQuote;
+  tierSelect.onchange = updateQuote;
+
+  // Package select buttons update dropdown
+  document.querySelectorAll('[data-tier]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      tierSelect.value = btn.dataset.tier;
+      updateQuote();
+      document.getElementById('guestSlider').scrollIntoView({behavior:'smooth'});
+    });
+  });
+  updateQuote();
+</script>
+</body>
+</html>
